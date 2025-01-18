@@ -1,0 +1,105 @@
+[gd_scene load_steps=16 format=3 uid="uid://b8h2qsgy2pogt"]
+
+[ext_resource type="Script" path="res://scripts/player_planet.gd" id="1_5jgip"]
+[ext_resource type="Texture2D" uid="uid://c410ou5jojdof" path="res://assets/sprites/blueplanet_spritesheet.png" id="2_6go8n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0e8y"]
+atlas = ExtResource("2_6go8n")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydj8i"]
+atlas = ExtResource("2_6go8n")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4v5s"]
+atlas = ExtResource("2_6go8n")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3glom"]
+atlas = ExtResource("2_6go8n")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vr2tw"]
+atlas = ExtResource("2_6go8n")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eliwd"]
+atlas = ExtResource("2_6go8n")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpivv"]
+atlas = ExtResource("2_6go8n")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bynfq"]
+atlas = ExtResource("2_6go8n")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06ocr"]
+atlas = ExtResource("2_6go8n")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtjvb"]
+atlas = ExtResource("2_6go8n")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3epk"]
+atlas = ExtResource("2_6go8n")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swjib"]
+atlas = ExtResource("2_6go8n")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e6ndr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0e8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydj8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4v5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3glom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vr2tw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eliwd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpivv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bynfq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06ocr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtjvb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3epk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swjib")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="playerPlanet" type="Node2D"]
+script = ExtResource("1_5jgip")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_e6ndr")
+autoplay = "default"
+frame = 4
+frame_progress = 0.257307
