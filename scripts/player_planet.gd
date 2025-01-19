@@ -10,7 +10,17 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	"""
+	Aim Indicator
+	"""
+	# Get the mouse position in global coordinates
+	var mouse_position = get_global_mouse_position()
+	
+	# Rotate the aim indicator to point at the mouse
+	$AimIndicator.look_at(mouse_position)
+	
+	# rotation number two to offset this, because I am an idiot
+	$AimIndicator.rotation += PI/2
 
 func take_damage(amount):
 	health -= amount

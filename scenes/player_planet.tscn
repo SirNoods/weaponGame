@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://b8h2qsgy2pogt"]
+[gd_scene load_steps=15 format=3 uid="uid://b8h2qsgy2pogt"]
 
 [ext_resource type="Script" path="res://scripts/player_planet.gd" id="1_5jgip"]
 [ext_resource type="Texture2D" uid="uid://c410ou5jojdof" path="res://assets/sprites/blueplanet_spritesheet.png" id="2_6go8n"]
+[ext_resource type="Texture2D" uid="uid://fkqxur8qpd2e" path="res://assets/sprites/bpaimindicator.png" id="3_h80l7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d0e8y"]
 atlas = ExtResource("2_6go8n")
@@ -43,14 +44,6 @@ region = Rect2(512, 0, 64, 64)
 atlas = ExtResource("2_6go8n")
 region = Rect2(576, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c3epk"]
-atlas = ExtResource("2_6go8n")
-region = Rect2(640, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_swjib"]
-atlas = ExtResource("2_6go8n")
-region = Rect2(704, 0, 64, 64)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_e6ndr"]
 animations = [{
 "frames": [{
@@ -83,16 +76,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vtjvb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c3epk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_swjib")
 }],
 "loop": true,
 "name": &"default",
-"speed": 12.0
+"speed": 8.0
 }]
 
 [node name="playerPlanet" type="Node2D"]
@@ -101,5 +88,7 @@ script = ExtResource("1_5jgip")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_e6ndr")
 autoplay = "default"
-frame = 4
-frame_progress = 0.257307
+frame_progress = 0.660567
+
+[node name="AimIndicator" type="Sprite2D" parent="."]
+texture = ExtResource("3_h80l7")
