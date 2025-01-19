@@ -1,3 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+assets/sprites/bg.png
+assets/sprites/bg.png.import
+assets/sprites/planet.png
+assets/sprites/planet.png.import
